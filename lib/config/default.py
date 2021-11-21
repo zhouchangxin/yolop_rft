@@ -49,16 +49,15 @@ _C.LOSS.DA_SEG_GAIN = 0.2  # driving area segmentation loss gain
 _C.LOSS.LL_SEG_GAIN = 0.2  # lane line segmentation loss gain
 _C.LOSS.LL_IOU_GAIN = 0.2  # lane line iou loss gain
 
-
 # DATASET related params
 _C.DATASET = CN(new_allowed=True)
 # the path of images folder
-_C.DATASET.DATAROOT = '/home/zhouchangxin/program/bdd/bdd100k/images/100k'
+_C.DATASET.DATAROOT = '/kaggle/input/solesensei_bdd100k/bdd100k/bdd100k/images/100k'
 # the path of det_annotations folder
-_C.DATASET.LABELROOT = '/home/zhouchangxin/program/bdd/bdd100k/labels/100k'
+_C.DATASET.LABELROOT = '/kaggle/input/yoloprf/data2/zwt/bdd/bdd100k/labels/100k'
 # the path of da_seg_annotations folder
-_C.DATASET.MASKROOT = '/home/zhouchangxin/program/bdd/bdd_seg_gt'
-_C.DATASET.LANEROOT = '/home/zhouchangxin/program/bdd/bdd_lane_gt'
+_C.DATASET.MASKROOT = '/kaggle/input/yoloprf/bdd_seg_gt'
+_C.DATASET.LANEROOT = 'kaggle/input/yoloprf/bdd_lane_gt'
 
 # _C.DATASET.DATAROOT = '/home/zwt/bdd/bdd100k/images/100k'       # the path of images folder
 # _C.DATASET.LABELROOT = '/home/zwt/bdd/bdd100k/labels/100k'      # the path of det_annotations folder
@@ -103,7 +102,7 @@ _C.TRAIN.BEGIN_EPOCH = 0
 _C.TRAIN.END_EPOCH = 240
 
 _C.TRAIN.VAL_FREQ = 1
-_C.TRAIN.BATCH_SIZE_PER_GPU = 4  # 24--------------------------------
+_C.TRAIN.BATCH_SIZE_PER_GPU = 12  # 24--------------------------------
 _C.TRAIN.SHUFFLE = True
 
 _C.TRAIN.IOU_THRESHOLD = 0.2

@@ -97,7 +97,7 @@ class AutoDriveDataset(Dataset):
         cv2.warpAffine
         """
         data = self.db[idx]
-        # print("****************paht:{}".format(data["image"]))
+        print("****************paht:{}".format(data["image"]))
         img = cv2.imread(data["image"], cv2.IMREAD_COLOR |
                          cv2.IMREAD_IGNORE_ORIENTATION)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
